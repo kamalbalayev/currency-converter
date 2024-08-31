@@ -1,0 +1,79 @@
+:root {
+    --shadow-color: rgba(36, 51, 98, .175);
+}
+
+*{
+    text-decoration: none !important;
+    outline: none;
+    letter-spacing: .3px;
+    scroll-behavior: smooth;
+}
+
+#__nuxt{
+    .text-uppercase{
+        text-transform: uppercase !important;
+    }
+}
+
+$index: 0;
+@for $i from 1 through 16 {
+    $index: $index + 1;
+
+    .z-index-#{$i} {
+        z-index: $index !important;
+    }
+
+}
+
+$pairs: 0;
+
+@mixin box-shadow($value, $color){
+    -webkit-box-shadow: $value $color !important;
+    -moz-box-shadow: $value $color !important;
+    box-shadow: $value $color !important;
+}
+
+@for $i from 1 through 24 {
+
+    $pairs: $pairs + 2px;
+
+    .elevation-#{$i} {
+        @include box-shadow(0 2px $pairs, var(--shadow-color));
+    }
+
+    .elevation-inset-#{$i} {
+        @include box-shadow(inset 0 2px $pairs, var(--shadow-color));
+    }
+}
+
+.lh {
+
+    $pairs: 1;
+
+    &-1 {
+        line-height: 1em !important;
+    }
+
+    @for $i from 1 through 10 {
+
+        $pairs: $pairs + 0.1;
+
+        &-1-#{$i} {
+            line-height: #{$pairs}em !important;
+        }
+    }
+
+    &-normal {
+        line-height: normal !important;
+    }
+
+    &-auto {
+        line-height: 1.4em !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .v-container {
+        max-width: 1280px !important;
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "currency-converter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "pwa": "pwa-assets-generator"
+  },
+  "dependencies": {
+    "@mdi/font": "latest",
+    "@nuxt/devtools": "latest",
+    "@pinia/nuxt": "latest",
+    "nuxt": "latest",
+    "pinia": "latest",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-fonts": "latest",
+    "@nuxtjs/i18n": "latest",
+    "@vite-pwa/assets-generator": "latest",
+    "@vite-pwa/nuxt": "latest",
+    "sass": "latest",
+    "sass-loader": "latest",
+    "vite-plugin-vuetify": "latest",
+    "vue-router": "latest",
+    "vuetify": "latest"
+  }
+}
